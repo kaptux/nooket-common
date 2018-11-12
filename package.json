@@ -5,9 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "rm -rf ./lib && tsc",
-    "storybook": "start-storybook -p 6006",
-    "prepare": "npm run build",
-    "build-storybook": "build-storybook"
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
