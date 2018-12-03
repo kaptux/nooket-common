@@ -99,21 +99,40 @@ export interface IViewContext {
   categoriesHashmap: { [_id: string]: ICategory };
 }
 
+export enum InstanceViewModeEnum {
+  FULLSCREEN = 'fullscreen',
+  INLINE = 'inline',
+}
+
+export interface IParamsRequestInstance {
+  viewMode: InstanceViewModeEnum;
+  instanceId: IInstance;
+  context: IViewContext;
+}
+
 export type ApiCallback = (error: any, result: any) => void;
+export type SaveInstanceCallback = (
+  userId: string, // TODO: No debería hacer falta. Meteor.userId()
+  instance: IInstance,
+  parentId: string,
+  callback: ApiCallback
+) => void;
 
 export interface IViewPluginProps {
   view: IView;
   context: IViewContext;
   data: IInstance[];
+  onRequestEditorView: (
+    viewMode: InstanceViewModeEnum,
+    categoryId: string,
+    defaultValues: IInstance,
+    onSaveInstance: SaveInstanceCallback
+  ) => void;
   onRequestInstanceView: (
-    instanceId: IInstance,
-    context: IViewContext,
-    callback: ApiCallback
+    viewMode: InstanceViewModeEnum,
+    instanceId: string
   ) => void;
-  onSaveInstance: (
-    userId: string, // TODO: No debería hacer falta. Meteor.userId()
-    instance: IInstance,
-    callback: ApiCallback
-  ) => void;
-  onSaveSate: (state: any, callback: ApiCallback) => void;
+  onSaveInstance: SaveInstanceCallback;
+  onSaveSate: (state: object, callback: ApiCallback) => void;
+  onSaveSettings: (settings: object, callback: ApiCallback) => void;
 }
