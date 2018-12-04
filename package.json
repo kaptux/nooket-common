@@ -1,6 +1,6 @@
 {
   "name": "nooket-common",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Nooket types and utilities",
   "main": "lib/index.js",
   "scripts": {

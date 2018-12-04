@@ -1,4 +1,4 @@
-export enum FieldTypeEnum {
+export enum RuleTypeEnum {
   REQUIRED = 'required',
   MAX = 'max',
   MIN = 'min',
@@ -8,7 +8,7 @@ export enum FieldTypeEnum {
   SEARCH = 'search',
   ALLOWED_VALUES = 'allowedValues',
 }
-export enum RuleTypeEnum {
+export enum FieldTypeEnum {
   INTEGER = 'integer',
   DECIMAL = 'decimal',
   STRING = 'string',
