@@ -115,8 +115,8 @@ export type ApiCallback = (error: any, result: any) => void;
 export type SaveInstanceCallback = (
   userId: string, // TODO: No debería hacer falta. Meteor.userId()
   instance: IInstance,
-  parentId: string,
-  callback: ApiCallback
+  parentId?: string,
+  callback?: ApiCallback
 ) => void;
 
 export interface IViewPluginProps {
@@ -134,6 +134,6 @@ export interface IViewPluginProps {
     instanceId: string
   ) => void;
   onSaveInstance: SaveInstanceCallback;
-  onSaveState: (state: object, callback: ApiCallback) => void;
-  onSaveSettings: (settings: object, callback: ApiCallback) => void;
+  onSaveState: (state: object, callback?: ApiCallback) => void;
+  onSaveSettings: (settings: object, callback?: ApiCallback) => void;
 }
