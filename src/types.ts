@@ -81,6 +81,7 @@ export interface IInstance {
 }
 
 export interface IUser {
+  _id: string;
   login: string;
   name: string;
   avatar: string;
@@ -133,6 +134,6 @@ export interface IViewPluginProps {
     instanceId: string
   ) => void;
   onSaveInstance: SaveInstanceCallback;
-  onSaveSate: (state: object, callback: ApiCallback) => void;
+  onSaveState: (state: object, callback: ApiCallback) => void;
   onSaveSettings: (settings: object, callback: ApiCallback) => void;
 }
