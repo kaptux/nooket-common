@@ -67,17 +67,17 @@ export interface IInstanceReference {
 
 export interface IInstance {
   _id: string;
-  categoryId: string;
-  title: string;
-  description: string;
-  fields: IInstanceField[];
-  createdAt: Date;
-  createdBy: string;
-  updatedAt: Date;
-  updatedBy: string;
-  mentions: string[];
-  userGroups: string[];
-  references: IInstanceReference[];
+  categoryId?: string;
+  title?: string;
+  description?: string;
+  fields?: IInstanceField[];
+  createdAt?: Date;
+  createdBy?: string;
+  updatedAt?: Date;
+  updatedBy?: string;
+  mentions?: string[];
+  userGroups?: string[];
+  references?: IInstanceReference[];
 }
 
 export interface IUser {
