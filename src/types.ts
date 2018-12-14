@@ -60,9 +60,9 @@ export enum RelationTypeEnum {
 
 export const CommonFieldsList = [
   { code: 'createdAt', name: 'Created at', type: FieldTypeEnum.DATE },
-  { code: 'createdBy', name: 'Created by', type: FieldTypeEnum.REFERENCE },
+  { code: 'createdBy', name: 'Created by', type: FieldTypeEnum.MENTION },
   { code: 'updatedAt', name: 'Updated at', type: FieldTypeEnum.DATE },
-  { code: 'updatedBy', name: 'Updated by', type: FieldTypeEnum.REFERENCE },
+  { code: 'updatedBy', name: 'Updated by', type: FieldTypeEnum.MENTION },
 ] as ICategoryField[];
 
 export interface IInstanceReference {
