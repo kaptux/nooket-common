@@ -32,9 +32,9 @@ export interface IFieldRule {
 export interface ICategoryField {
   code: string;
   name: string;
-  description: string;
+  description?: string;
   type: FieldTypeEnum;
-  rules: IFieldRule[];
+  rules?: IFieldRule[];
 }
 
 export interface ICategory {
@@ -57,6 +57,13 @@ export enum RelationTypeEnum {
   FIELD = 'field',
   CONTENT = 'content',
 }
+
+export const CommonFieldsList = [
+  { code: 'createdAt', name: 'Created at', type: FieldTypeEnum.DATE },
+  { code: 'createdBy', name: 'Created by', type: FieldTypeEnum.REFERENCE },
+  { code: 'updatedAt', name: 'Updated at', type: FieldTypeEnum.DATE },
+  { code: 'updatedBy', name: 'Updated by', type: FieldTypeEnum.REFERENCE },
+] as ICategoryField[];
 
 export interface IInstanceReference {
   _id: string;
