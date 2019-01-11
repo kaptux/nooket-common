@@ -143,4 +143,5 @@ export interface IViewPluginProps {
   onSaveInstance: SaveInstanceCallback;
   onSaveState: (state: object, callback?: ApiCallback) => void;
   onSaveSettings: (settings: object, callback?: ApiCallback) => void;
+  fetchTimestamp: Number;
 }
